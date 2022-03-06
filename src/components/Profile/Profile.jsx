@@ -1,10 +1,12 @@
-export function Profile({ avatar, username, tag, location, stats }) {
+import PropTypes from 'prop-types';
+
+export function Profile({ username, tag, location, avatar, stats }) {
   return (
     <div className="profile">
       <div className="description">
-        <img src={avatar} alt={username} className="avatar" />
+        <img src={avatar} alt={username} className="avatar" width="150" />
         <p className="name">{username}</p>
-        <p className="tag">{tag}</p>
+        <p className="tag">@{tag}</p>
         <p className="location">{location}</p>
       </div>
 
@@ -25,3 +27,15 @@ export function Profile({ avatar, username, tag, location, stats }) {
     </div>
   );
 }
+
+Profile.propTypes = {
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
+  stats: PropTypes.shape({
+    followers: PropTypes.number,
+    views: PropTypes.number,
+    likes: PropTypes.number,
+  }),
+};

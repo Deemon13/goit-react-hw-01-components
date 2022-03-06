@@ -1,5 +1,5 @@
-// import React from 'react';
-import ReactDom from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import { App } from 'components/App';
 // import { Prodile } from 'components/Profile';
 
@@ -7,7 +7,7 @@ import { App } from 'components/App';
 
 // const jsxElement = <div>Hello world</div>;
 
-ReactDom.render(<App />, document.querySelector('#root'));
+// ReactDom.render(<App />, document.querySelector('#root'));
 
 // import React from 'react';
 // import ReactDOM from 'react-dom';
@@ -15,12 +15,12 @@ ReactDom.render(<App />, document.querySelector('#root'));
 // import reportWebVitals from './reportWebVitals';
 // import './index.css';
 
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
 // // If you want to start measuring performance in your app, pass a function
 // // to log results (for example: reportWebVitals(console.log))
