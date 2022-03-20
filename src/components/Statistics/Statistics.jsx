@@ -10,7 +10,9 @@ export function Statistics({ title, stats }) {
       <ul className="stat-list">
         {stats.map(({ id, label, percentage }) => {
           return (
-            <StatisticsItem key={id} label={label} percentage={percentage} />
+            <li key={id} className="item">
+              <StatisticsItem label={label} percentage={percentage} />
+            </li>
           );
         })}
       </ul>
@@ -22,9 +24,7 @@ Statistics.propTypes = {
   title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string,
-      label: PropTypes.string,
-      percentage: PropTypes.number,
+      id: PropTypes.string.isRequired,
     })
-  ),
+  ).isRequired,
 };
