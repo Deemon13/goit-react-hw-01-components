@@ -5,7 +5,7 @@ export function Profile(props) {
   return (
     <div className="profile">
       <div className="description">
-        <img src={avatar} alt={username} className="avatar" />
+        <img src={avatar} alt={username} className="avatar" width={150} />
         <p className="name">{username}</p>
         <p className="tag">@{tag}</p>
         <p className="location">{location}</p>
