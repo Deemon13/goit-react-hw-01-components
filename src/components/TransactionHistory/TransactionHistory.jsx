@@ -17,12 +17,14 @@ export function TransactionHistory(props) {
 
       <tbody>
         {items.map(item => {
+          const { id, type, amount, currency } = item;
+
           return (
             <TransactionHistoryItem
-              key={item.id}
-              type={item.type}
-              amount={item.amount}
-              currency={item.currency}
+              key={id}
+              type={type}
+              amount={amount}
+              currency={currency}
             />
           );
         })}

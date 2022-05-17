@@ -8,12 +8,14 @@ export function FriendList(props) {
   return (
     <ul className="friend-list">
       {friends.map(friend => {
+        const { id, avatar, name, isOnline } = friend;
+
         return (
           <FriendListItem
-            key={friend.id}
-            avatar={friend.avatar}
-            name={friend.name}
-            isOnline={friend.isOnline}
+            key={id}
+            avatar={avatar}
+            name={name}
+            isOnline={isOnline}
           />
         );
       })}

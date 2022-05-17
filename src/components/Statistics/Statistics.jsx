@@ -4,16 +4,17 @@ import { StatisticsItem } from 'components/StatisticsItem/StatisticsItem';
 
 export function Statistics(props) {
   const { title, stats } = props;
+
   return (
     <section className="statistics">
-      {title && <h2 className="title">Upload stats</h2>}
+      {title && <h2 className="title">{title}</h2>}
 
       <ul className="stat-list">
         {stats.map(stat => {
+          const { id, label, percentage } = stat;
+
           return (
-            <li key={stat.id} className="item">
-              <StatisticsItem label={stat.label} percentage={stat.percentage} />
-            </li>
+            <StatisticsItem key={id} label={label} percentage={percentage} />
           );
         })}
       </ul>
